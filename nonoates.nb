@@ -1,0 +1,139 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4915,        129]
+NotebookOptionsPosition[      4472,        109]
+NotebookOutlinePosition[      4831,        125]
+CellTagsIndexPosition[      4788,        122]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{"\"\<Overall Model:\>\"", "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ToExpression", "[", 
+   RowBox[{
+   "\"\<C_{NO} = [init]_{nono} e^{-t/\\tau_{nono}} - \
+[init]_{no}e^{-t/\\tau_{nono}}\>\"", ",", " ", "TeXForm"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.723798680145681*^9, 3.7237986835775957`*^9}, {
+   3.723798723708433*^9, 3.723798867722218*^9}, {3.723798925569394*^9, 
+   3.723798973165783*^9}, {3.723799957062889*^9, 3.723799957956036*^9}, {
+   3.7238004898295307`*^9, 3.7238005394518347`*^9}, {3.723800597541286*^9, 
+   3.723800639153925*^9}, {3.7238006878348923`*^9, 3.723800836394503*^9}, {
+   3.7238008775288754`*^9, 3.723800915965734*^9}, 3.723800950926907*^9, {
+   3.723800993582571*^9, 3.723801002124921*^9}, {3.723801347446807*^9, 
+   3.723801358524352*^9}, 3.7238015987547703`*^9, {3.7238021481511507`*^9, 
+   3.72380216760252*^9}, {3.7238022759996357`*^9, 3.723802285469726*^9}},
+ EmphasizeSyntaxErrors->True],
+
+Cell[BoxData["\<\"Overall Model:\"\>"], "Output",
+ CellChangeTimes->{{3.723798772440899*^9, 3.723798839283408*^9}, {
+   3.723798932839293*^9, 3.723798974062583*^9}, {3.723799955773326*^9, 
+   3.723799958841736*^9}, {3.723800495297298*^9, 3.723800540009716*^9}, {
+   3.7238005999671993`*^9, 3.723800639573908*^9}, {3.723800697796936*^9, 
+   3.7238007348836803`*^9}, {3.723800793093556*^9, 3.723800836880659*^9}, {
+   3.723800890058468*^9, 3.7238009163658047`*^9}, 3.723800952210148*^9, {
+   3.723800995204023*^9, 3.7238010026041203`*^9}, {3.723801353061699*^9, 
+   3.723801359718171*^9}, 3.723801680845533*^9, {3.723802153093048*^9, 
+   3.72380216820555*^9}, {3.723802272022171*^9, 3.723802278873564*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ToExpression","esntx",
+   "\"Could not parse \\!\\(\\*RowBox[{\\\"\\\\\\\"\\\\\\\\\\\\\\\\{C_{NO} = \
+[init]_{nono} e^{-t/\\\\\\\\tau_{nono}} - \
+[init]_{no}e^{-t/\\\\\\\\tau_{nono}}}\\\\\\\"\\\"}]\\) as input.\"",2,122,115,
+   28547492652959659857,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.7238016808719177`*^9, {3.723802153129839*^9, 3.723802168231996*^9}, {
+   3.7238022720497303`*^9, 3.723802278900289*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Taunono", " ", "and", " ", "tauno", " ", "are", " ", "constants"}], ";", 
+    " ", 
+    RowBox[{
+    "change", " ", "if", " ", "nonoate", " ", "type", " ", "changes"}]}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Note", " ", "that", " ", "this", " ", "works", " ", "for", " ", "all", 
+    " ", "units", " ", "as", " ", "long", " ", "as", " ", "they", " ", "are", 
+    " ", "consistent"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"taunono", " ", "=", " ", "107458"}], ";"}], " ", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"tauno", " ", "=", " ", "641"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"initnono", " ", "=", " ", "500"}], ";"}], "\[IndentingNewLine]", 
+   
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "I", " ", "thought", " ", "this", " ", "should", " ", "be", " ", "0", 
+      " ", "by", " ", "default"}], ",", " ", 
+     RowBox[{"can", " ", "be", " ", "changed", " ", "though"}]}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"initno", " ", "=", " ", "0"}], ";"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{
+  3.7238006061163197`*^9, {3.723801135139162*^9, 3.7238011705919933`*^9}, {
+   3.723801208376363*^9, 3.7238012623838263`*^9}, {3.723801486632118*^9, 
+   3.723801569265456*^9}, {3.723801668023672*^9, 3.72380170630046*^9}, {
+   3.723802206848695*^9, 3.7238022340143414`*^9}, {3.723802751762699*^9, 
+   3.723802761328002*^9}, {3.723802798729282*^9, 3.723802807393762*^9}, {
+   3.723802871269856*^9, 3.723802901890551*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.723801687289846*^9, 3.7238016881732483`*^9}}]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 953, 16, 54, "Input"],
+Cell[1536, 40, 704, 9, 32, "Output"],
+Cell[2243, 51, 476, 10, 24, "Message"]
+}, Open  ]],
+Cell[2734, 64, 1637, 40, 180, "Input"],
+Cell[4374, 106, 94, 1, 32, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
