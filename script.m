@@ -53,12 +53,18 @@ pH6 = [7.46, 7.24, 7.08, 6.80, 6.31, 6.08, 5.88, 5.04, 4.50, 4.47, 3.85, 3.44, 3
 kobs6 = [7.98*10^(-6), 1.42*10^(-5), 1.87*10^(-5), 3.17*10^(-5), 7.43*10^(-5), 1.03*10^(-4), 1.63*10^(-4), 6.31*10^(-4), 2.06*10^(-3), 2.37*10^(-3), 5.828*10^(-3), 9.72*10^(-3), 0.0119, 0.0152, 0.0146, 0.0140, 0.0245, 0.0222, 0.0264, 0.0295];
 halflife = [24.1, 13.6, 10.3, 6.1, 2.6, 1.9, 1.2, 0.305, 0.0933, 0.0816, 0.0333, 0.02, 0.0161, 0.0127, 0.0130, 0.0138, 0.0077, 0.0086, 0.0072, 0.0066];
 plot(pH6, kobs6, 'b+');
-title('Diazeniumdiolate ion 4 pH vs Dissaciation constant k_{obs}');
+title('Diazeniumdiolate ion 6 pH vs Dissaciation constant k_{obs}');
 xlabel('pH')
 ylabel('k_{obs}')
 figure;
 plot(pH6, halflife, 'b+');
-title('Diazeniumdiolate ion 4 pH vs Dissaciation constant k_{obs}');
+title('Diazeniumdiolate ion 4 pH vs Half-Life');
+xlabel('pH')
+ylabel('k_{obs}')
+hold on;
+f = fit(pH6(:), halflife(:),'exp1')
+plot(f);
+title('Diazeniumdiolate ion 4 pH vs Half-Life');
 xlabel('pH')
 ylabel('k_{obs}')
 
