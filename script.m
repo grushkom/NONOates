@@ -64,8 +64,9 @@ ylabel('k_{obs}')
 hold on;
 f = fit(pH6(:), halflife(:),'exp1')
 plot(f);
-title('Diazeniumdiolate ion 4 pH vs Half-Life');
+title('Half-Life vs pH for deta NONOate ');
 xlabel('pH')
-ylabel('k_{obs}')
+ylabel('t_{1/2}, in days')
+legend('Raw Data', 'Fitted Curve')
 
 %% Model Fitting 
